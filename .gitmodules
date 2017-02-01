@@ -1,0 +1,3 @@
+[submodule "contracts/ens"]
+	path = contracts/ens
+	url = https://github.com/dougvk/ens.git
