@@ -1,7 +1,7 @@
 {
-  "name": "ens-cli3",
-  "version": "0.0.1",
-  "description": "CLI for ENS deployment",
+  "name": "truffle3-frontend-example",
+  "version": "0.1",
+  "description": "Frontend example using truffle v3",
   "scripts": {
     "lint": "./node_modules/.bin/eslint ./",
     "build": "./node_modules/.bin/webpack"
