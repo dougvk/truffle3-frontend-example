@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    ".travis.yml",
+    "docker"
+  ],
+  "commands": {
+    "Compile": "truffle compile",
+    "Migrate": "truffle migrate",
+    "Test": "truffle test",
+    "Build Frontend": "npm run build",
+    "Run Linter": "npm run lint",
+    "Run Dev Server": "truffle serve"
+  }
+}
