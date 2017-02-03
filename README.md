@@ -1,16 +1,18 @@
-# truffle3-frontend-example
+# truffle-init-webpack
+Example webpack project with Truffle. Includes contracts, migrations, tests, user interface and webpack build pipeline.
 
-## In order to build and run the frontend code, first
-1. `yarn install` or `npm install` depending on your preference
-2. make sure you have testrpc running , and change `truffle.js` to point to that network. e.g. `localhost:8545`.
-3. `truffle compile` to create the json contract artifacts
-4. `truffle migrate` to deploy the contracts onto the network
-5. change the web3 provider in `app/main.js` to point to the testrpc server.
-6. `npm run build` to compile the javascript and html assets into the `build` folder
-7. `truffle serve` to serve the assets in the build folder
+## Usage
+
+To initialize a project with this exapmple, run `truffle init webpack` inside an empty directory.
+
+## Building and the frontend
+
+1. First run `truffle compile`, then run `truffle migrate` to deploy the contracts onto your network of choice (default "development").
+1. Then run npm run dev to build the app and serve it on http://localhost:8080
 
 ## Possible upgrades
-* Use the webpack hotloader to sense when contracts or javascript have been recompiled and rebuild the application
+
+* Use the webpack hotloader to sense when contracts or javascript have been recompiled and rebuild the application. Contributions welcome!
 
 ## Common Errors
 
