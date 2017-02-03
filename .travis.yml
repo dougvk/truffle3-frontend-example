@@ -17,8 +17,8 @@ before_install:
   - docker ps
 
 script:
-  - docker-compose -f docker/docker-compose.yml run truffle3 /bin/sh -c "npm install; npm run lint"
-  - docker-compose -f docker/docker-compose.yml run truffle3 /bin/sh -c "/root/truffle/cli.js compile"
-  - docker-compose -f docker/docker-compose.yml run truffle3 /bin/sh -c "npm run build"
-  - docker-compose -f docker/docker-compose.yml run truffle3 /bin/sh -c "/root/truffle/cli.js migrate"
-  - docker-compose -f docker/docker-compose.yml run truffle3 /bin/sh -c "/root/truffle/cli.js test"
+  - docker-compose -f docker/docker-compose.yml run truffle3_frontend /bin/sh -c "npm install; npm run lint"
+  - docker-compose -f docker/docker-compose.yml run truffle3_frontend /bin/sh -c "/root/truffle/cli.js compile"
+  - docker-compose -f docker/docker-compose.yml run truffle3_frontend /bin/sh -c "npm run build"
+  - docker-compose -f docker/docker-compose.yml run truffle3_frontend /bin/sh -c "/root/truffle/cli.js migrate"
+  - docker-compose -f docker/docker-compose.yml run truffle3_frontend /bin/sh -c "/root/truffle/cli.js test"
