@@ -3,18 +3,22 @@ services:
   testrpc:
     image: dougvk/mydapp_testrpc
     command: bash -c "testrpc -h 0.0.0.0"
-  truffle3:
+    ports:
+      - "7000:8545"
+  truffle3_frontend:
     image: dougvk/truffle3:latest
     command: bash
     stdin_open: true
     tty: true
+    ports:
+      - "7001:8080"
     volumes_from:
-      - truffle3_vol
-  truffle3_vol:
+      - truffle3_frontend_vol
+  truffle3_frontend_vol:
     image: busybox
-    container_name: truffle_vol
+    container_name: truffle3_frontend_vol
     volumes:
       - ../:/app
 
 volumes:
-  truffle3_vol:
+  truffle3_frontend_vol:
