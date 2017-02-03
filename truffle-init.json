@@ -7,5 +7,5 @@
     "Run Linter": "npm run lint",
     "Run Dev Server": "npm run dev"
   },
-  "epilogue": "Hint: Run the dev server via `npm run dev` to have your changes rebuilt automatically."
+  "epilogue": "Hint: Run the dev server via `npm run dev` to have your changes rebuilt automatically.\n\nMake sure you have an Ethereum client like the TestRPC running on http://localhost:8545: https://github.com/ethereumjs/testrpc"
 }
