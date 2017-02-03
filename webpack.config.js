@@ -1,33 +1,27 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './app/main.js',
+  entry: './app/javascripts/app.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name].[hash].js'
+    filename: 'app.js'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './app/index.html',
-      filename: 'index.html',
-      inject: 'body',
-      hash: false,
-      minify: {
-        collapseWhitespace: true
-      }
-    }),
-    new UglifyJSPlugin({
-      sourceMap: false
-    })
+    // Copy our app's index.html to the build folder.
+    new CopyWebpackPlugin([
+      { from: './app/index.html', to: "index.html" }
+    ])
   ],
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.json$/,
-        use: 'json-loader'
-      },
+       test: /\.css$/,
+       use: [ 'style-loader', 'css-loader' ]
+      }
+    ],
+    loaders: [
+      { test: /\.json$/, use: 'json-loader' },
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
