@@ -11,5 +11,5 @@
     "Run Linter": "npm run lint",
     "Run Dev Server": "truffle serve"
   },
-  "epilogue": "This project includes a web application and user interface, and uses webpack as the build tool to bundle it all together. After compiling and migrating your contracts and running the builder, open ./build/index.html in your browser. The app is configured to integrate directly with MetaMask, so make sure you have that installed and configured before interacting with your application."
+  "epilogue": "This project relies on MetaMask (https://metamask.io/). Make sure you have it installed and configured before using your application."
 }
