@@ -11,3 +11,17 @@
 
 ## Possible upgrades
 * Use the webpack hotloader to sense when contracts or javascript have been recompiled and rebuild the application
+
+## Common Errors
+
+* **Error: Can't resolve '../build/contracts/MetaCoin.json'**
+
+This means you haven't compiled or migrated your contracts yet. Run `truffle compile` and `truffle migrate` first.
+
+Full error:
+
+```
+ERROR in ./app/main.js
+Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/Users/tim/Documents/workspace/Consensys/test3/app'
+ @ ./app/main.js 11:16-59
+```
