@@ -11,5 +11,5 @@
     "Run Linter": "npm run lint",
     "Run Dev Server": "truffle serve"
   },
-  "epilogue": "This project relies on MetaMask (https://metamask.io/). Make sure you have it installed and configured in Chrome before continuing."
+  "epilogue": "This project relies on MetaMask (https://metamask.io/).\nMake sure you have it installed and configured in Chrome before continuing."
 }
