@@ -1,6 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack');
 
 module.exports = {
   entry: './app/main.js',
@@ -9,6 +9,7 @@ module.exports = {
     filename: '[name].[hash].js'
   },
   plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       template: './app/index.html',
       filename: 'index.html',
@@ -17,9 +18,6 @@ module.exports = {
       minify: {
         collapseWhitespace: true
       }
-    }),
-    new UglifyJSPlugin({
-      sourceMap: false
     })
   ],
   module: {
