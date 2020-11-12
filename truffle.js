@@ -1,11 +1,6 @@
 require('babel-register')
 
 module.exports = {
-  compilers: {
-    solc: {
-      version: "^0.4.2",
-    }
-  },
   networks: {
     development: {
       host: 'testrpc',
